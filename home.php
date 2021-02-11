@@ -29,7 +29,7 @@ include'connect.php';
             </td>
     </tr>
     <tr>
-    <td> Username</td>
+    <td> Username </td>
     
     <td>
             
@@ -60,5 +60,6 @@ echo $f['image'];?>" width="100px" height="100px">
 <a href="edit.php">Edit</a>
 <a href="delete.php">Delete</a>
 <a href="logout.php">Logout</a>
-    </body>
+<a href="viewall.php">View All Users</a>
+</body>
 </html>
