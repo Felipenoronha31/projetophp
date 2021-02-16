@@ -52,9 +52,17 @@ if(isset($_POST['sub'])){
                     <td>
                         city
                         <select name="city">
-                            <option value="">-select-</option>
-                            <option value="knp"<?php if($f['city']=='knp'){ echo "selected='selected'";}?>>kanpur</option>
-                            <option value="lko"<?php if($f['city']=='lko'){ echo "selected='selected'";}?>>lucknow</option>
+                            <?php
+
+                              $sqlCity = mysqli_query($con, "select * from city");
+
+                              while($item = mysqli_fetch_assoc($sqlCity)){
+
+                                $nomeItem = $item['name_city'];
+                                echo "<option value=$nomeItem>$nomeItem</option>";
+                              }
+
+                            ?>
                     </td>
                 </tr>
                 <tr>
