@@ -36,5 +36,27 @@ if(isset($_POST['sub'])){
                 </tr>
 
             </table>
+
+            <table border='1'>
+                <tr>
+                    <th>
+                        Name City
+                    </th>
+                </tr>
+
+            <?php
+            $sq="select * from regcity";
+            $qu=mysqli_query($con,$sq);
+            while($f=  mysqli_fetch_assoc($qu)){
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $f['name_city']?>
+                    </td>
+                </tr>
+            <?php
+            }
+            ?>
+            </table>
     </body>
 </html>
