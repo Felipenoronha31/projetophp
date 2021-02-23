@@ -107,5 +107,6 @@ if(isset($_POST['sub'])){
                                
                     </td>
                 </tr>
+                <a href="home.php">Home</a>
             </table>
 </form>

@@ -31,7 +31,7 @@ if(isset($_POST['sub'])){
 
                 <tr>
                     <td>
-                        <a href="login.php"> Login</a>
+                        <a href="home.php">Home</a>
                     </td>
                 </tr>
 
@@ -42,16 +42,23 @@ if(isset($_POST['sub'])){
                     <th>
                         Name City
                     </th>
+                    <th>
+                        Editar
+                    </th>
                 </tr>
 
             <?php
             $sq="select * from regcity";
             $qu=mysqli_query($con,$sq);
-            while($f=  mysqli_fetch_assoc($qu)){
+            while($f=  mysqli_fetch_assoc($qu)){ 
                 ?>
                 <tr>
                     <td>
                         <?php echo $f['name_city']?>
+                    </td>
+                    <td>
+                    <a href="edit_city.php?idCity=<?php echo $f['Id_city']?>">Edit</a>
+                    <!-- <a href="reg_city.php">Editar</a> -->
                     </td>
                 </tr>
             <?php
