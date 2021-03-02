@@ -3,7 +3,7 @@ include 'connect.php';
 if(isset($_POST['sub'])){
     $nameCity=$_POST['nameCity'];
 
-    $sqlinsertCity="insert into regcity(name_city)value('$nameCity')";
+    $sqlinsertCity="insert into city (name_city) values ('$nameCity')";
     mysqli_query($con, $sqlinsertCity);
 }
 ?>
@@ -45,6 +45,9 @@ if(isset($_POST['sub'])){
                     <th>
                         Editar
                     </th> 
+                    <th>
+                        Delete
+                    </th>
                 </tr>
 
             <?php
@@ -59,6 +62,9 @@ if(isset($_POST['sub'])){
                     <td>
                     <a href="edit_city.php?Id_city=<?php echo $f['Id_city']?>">Edit</a>
                     <!-- <a href="reg_city.php">Editar</a> -->
+                    </td>
+                    <td>
+                    <a href="delete_city.php?Id_city=<?php echo $f['Id_city']?>">Delete</a>
                     </td>
                 </tr>
             <?php
