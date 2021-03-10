@@ -13,7 +13,7 @@ if(isset($_POST['sub'])){
     }
     else{
         echo 'username or password does not exist';
-    }
+    } 
     
 }
                
