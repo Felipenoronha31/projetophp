@@ -1,5 +1,6 @@
 <?php
 include 'connect.php';
+include 'check_adm.php';
 if(isset($_POST['sub'])){
     $nameCity=$_POST['nameCity'];
 
